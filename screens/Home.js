@@ -9,7 +9,7 @@ import RestaurantItems, {
 import SearchBar from '../components/SearchBar'
 
 const YELP_API_KEY =
-  'VzcXson1ILtscrIPn_PJW4Ti4dQyljsr7MjA2lTVHb4B6FW9mDthmvxZ-NGrymmcopLewGlJIHpYqdUkTEL8sHesEeRWb_e78c44UrYvU1Ap6dm7qTh_mKhzc4tpYXYx'
+  'YELP_FUSION_API_KEY_HERE'
 
 export default function Home({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants)
