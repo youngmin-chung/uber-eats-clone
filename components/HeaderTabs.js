@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-export default function HeaderTabs() {
-  const [activeTab, setActiveTab] = useState('Delivery')
+export default function HeaderTabs(props) {
   return (
     <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
       {/* Header Button - Delivery */}
@@ -10,16 +9,16 @@ export default function HeaderTabs() {
         text='Delivery'
         btnColor='black'
         textColor='white'
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        activeTab={props.activeTab}
+        setActiveTab={props.setActiveTab}
       />
       {/* Header Button - Pickup */}
       <HeaderButton
         text='Pickup'
         btnColor='white'
         textColor='black'
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        activeTab={props.activeTab}
+        setActiveTab={props.setActiveTab}
       />
     </View>
   )

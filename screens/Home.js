@@ -9,7 +9,7 @@ import RestaurantItems, {
 import SearchBar from '../components/SearchBar'
 
 const YELP_API_KEY =
-  'YELP_FUSION_API_KEY_HERE'
+  'YELP_API_KEY'
 
 export default function Home({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants)
@@ -27,17 +27,23 @@ export default function Home({ navigation }) {
 
     return fetch(yelpUrl, apiOptions)
       .then((res) => res.json())
-      .then((json) => setRestaurantData(json.businesses))
+      .then((json) =>
+        setRestaurantData(
+          json.businesses.filter((business) =>
+            business.transactions.includes(activeTab.toLowerCase())
+          )
+        )
+      )
   }
 
   useEffect(() => {
     getRestaurantsFromYelp()
-  }, [city])
+  }, [city, activeTab])
 
   return (
     <SafeAreaView style={{ backgroundColor: '#eee', flex: 1 }}>
       <View style={{ backgroundColor: 'white', padding: 15 }}>
-        <HeaderTabs />
+        <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar cityHandler={setCity} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
