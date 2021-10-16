@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import { Divider } from 'react-native-elements/dist/divider/Divider'
+import BottomTabs from '../components/BottomTabs'
 
 import Categories from '../components/Categories'
 import HeaderTabs from '../components/HeaderTabs'
@@ -9,7 +11,7 @@ import RestaurantItems, {
 import SearchBar from '../components/SearchBar'
 
 const YELP_API_KEY =
-  'YELP_API_KEY'
+  'VzcXson1ILtscrIPn_PJW4Ti4dQyljsr7MjA2lTVHb4B6FW9mDthmvxZ-NGrymmcopLewGlJIHpYqdUkTEL8sHesEeRWb_e78c44UrYvU1Ap6dm7qTh_mKhzc4tpYXYx'
 
 export default function Home({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants)
@@ -50,6 +52,11 @@ export default function Home({ navigation }) {
         <Categories />
         <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
+      <Divider width={1} />
+      <View>
+        <BottomTabs
+          style={{ backgroundColor: 'white', padding: 15 }}></BottomTabs>
+      </View>
     </SafeAreaView>
   )
 }
