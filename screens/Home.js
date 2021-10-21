@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, SafeAreaView, ScrollView } from 'react-native'
 import { Divider } from 'react-native-elements/dist/divider/Divider'
-import BottomTabs from '../components/BottomTabs'
+import BottomTabs from '../components/home/BottomTabs'
 
-import Categories from '../components/Categories'
-import HeaderTabs from '../components/HeaderTabs'
+import Categories from '../components/home/Categories'
+import HeaderTabs from '../components/home/HeaderTabs'
 import RestaurantItems, {
   localRestaurants,
-} from '../components/RestaurantItems'
-import SearchBar from '../components/SearchBar'
+} from '../components/home/RestaurantItems'
+import SearchBar from '../components/home/SearchBar'
 
 const YELP_API_KEY =
   'VzcXson1ILtscrIPn_PJW4Ti4dQyljsr7MjA2lTVHb4B6FW9mDthmvxZ-NGrymmcopLewGlJIHpYqdUkTEL8sHesEeRWb_e78c44UrYvU1Ap6dm7qTh_mKhzc4tpYXYx'
