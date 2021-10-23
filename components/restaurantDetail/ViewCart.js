@@ -75,9 +75,7 @@ export default function ViewCart({ navigation }) {
       <>
         <View style={styles.modalContainer}>
           <View style={styles.modalCheckoutContainer}>
-            <Text style={styles.restaurantName}>
-              {restaurantName.restaurantName}
-            </Text>
+            <Text style={styles.restaurantName}>{restaurantName}</Text>
             {items.map((item, index) => (
               <OrderItem key={index} item={item} />
             ))}
