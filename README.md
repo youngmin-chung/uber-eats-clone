@@ -22,6 +22,8 @@ It's tutorial of react native through cloning uber eats
 ### Prerequisites
 
 * React Native, Yelp API, Google Place API, NodeJs
+* You need `GOOGLE PLACE API KEY` for working properly this app
+  * Please add your key on `../components/home/SearchBar.js` 
 
 ### Installing
 
